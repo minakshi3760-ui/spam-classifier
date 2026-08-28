@@ -10,7 +10,7 @@ model = joblib.load('model.pkl')
 
 def clean_text(text):
     text = text.lower()
-    text = re.sub(r'[^a-zA-Zs]', '', text)
+    text = re.sub(r'[^a-zA-Z\s]', '', text)
     return text
 
 @app.route('/')
